@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>taylan & zümra</title>
+    <title>zümra & sen</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -54,12 +54,12 @@
     </style>
   </head>
   <body>
-    <!-- giriş sayfası -->
+    <!-- giriş -->
     <div
       class="section d-flex flex-column justify-content-center align-items-center text-center"
     >
       <h1 class="mb-3">zümra & taylan</h1>
-      <p class="lead">22 nisan 2025 – yeniden başlasın.</p>
+      <p class="lead">23 nisan 2025 – yeniden başlasın.</p>
       <p>
         "tarihlerimizi unutmamak adına ilk yazılı kaynağımız ve aşağı kaydır
         minik bir quizimiz var."
@@ -94,12 +94,12 @@
           <img src="/image.jpg" class="img-fluid rounded" />
         </div>
         <div class="col-4">
-          <img src="zumra2.JPG" class="img-fluid rounded" />
+          <img src="/zumra2.JPG" class="img-fluid rounded" />
         </div>
       </div>
     </div>
 
-    <!-- anket -->
+    <!-- anketler -->
     <div class="section">
       <h3>kim daha aşık?</h3>
       <button class="btn btn-outline-primary" onclick="vote('taylan', 'love')">
@@ -113,7 +113,6 @@
 
     <div class="section">
       <h3>kim daha sinirli?</h3>
-      <p></p>
       <button class="btn btn-outline-primary" onclick="vote('taylan', 'anger')">
         taylan
       </button>
@@ -135,17 +134,19 @@
       <p class="mt-2" id="voteResultStudy">oylamaya katılınız</p>
     </div>
 
-    <!-- gizli mesaj -->
+    <!-- gizli mesaj 1 -->
     <div class="section">
       <h3>gizli mesaj</h3>
       <input
         type="password"
         class="form-control"
-        id="secretPass"
+        id="secretPass1"
         placeholder="şifreyi gir"
       />
-      <button class="btn btn-mavi mt-2" onclick="revealSecret()">göster</button>
-      <p class="mt-3 hidden" id="secretMessage">“benimle evlenir misin??”</p>
+      <button class="btn btn-mavi mt-2" onclick="revealSecret1()">
+        göster
+      </button>
+      <p class="mt-3 hidden" id="secretMessage1">“benimle evlenir misin??”</p>
     </div>
 
     <!-- müzik -->
@@ -164,6 +165,23 @@
           loading="lazy"
         ></iframe>
       </div>
+    </div>
+
+    <!-- gizli mesaj 2 -->
+    <div class="section">
+      <h3>akıllı sevgilime sadece</h3>
+      <input
+        type="password"
+        class="form-control"
+        id="secretPass2"
+        placeholder="şifreyi bulamijjan bu sefer"
+      />
+      <button class="btn btn-mavi mt-2" onclick="revealSecret2()">
+        göster
+      </button>
+      <p class="mt-3 hidden" id="secretMessage2">
+        “aşkım kesin ben söylemişimdir bunu ya sen bulamazsın imkansızz”
+      </p>
     </div>
 
     <script>
@@ -221,14 +239,24 @@
         }
       }
 
-      function revealSecret() {
-        const pass = document.getElementById("secretPass").value;
+      function revealSecret1() {
+        const pass = document.getElementById("secretPass1").value;
         if (pass === "sevgilimicokseviyorum") {
-          document.getElementById("secretMessage").classList.remove("hidden");
+          document.getElementById("secretMessage1").classList.remove("hidden");
         } else {
           alert("şifre yanlış zaaa");
+        }
+      }
+
+      function revealSecret2() {
+        const pass = document.getElementById("secretPass2").value;
+        if (pass === "acabaçocuğumuzolduğundaadınınekoyacağız") {
+          document.getElementById("secretMessage2").classList.remove("hidden");
+        } else {
+          alert("şifre yanlış zaaa bunu asla bulamayacaksın");
         }
       }
     </script>
   </body>
 </html>
+
